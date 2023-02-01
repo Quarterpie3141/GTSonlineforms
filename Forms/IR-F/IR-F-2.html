@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="GoodTurnServices online Incident Report form">
+    <meta name="keywords" content="GoodTurnServices">
+    <meta name="author" content="Prashan Wijesinghe">
+    <meta name="viewport" content="width=device-width, initial-scale=0.2">
+    <link rel="stylesheet" href="../../css/Form.css">  
+    <link rel="icon" type="image/x-icon" href="../../Images/favicon.png"> 
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <script src="../../js/bootstrap.bundle.min.js"></script>
+    <title>IR-F-2</title>
+</head> 
+<?php
+    session_start();
+    if($_SESSION["loggedin"] == false){
+        $_SESSION['Desuri'] = "location: ../../Forms/IR-f/IR-F-2.php";
+        header("location: ../../Backend/login.php");
+        exit();
+    }
+?>
+<html lang="en" >
+<body>
+    <form style="margin: 190px;" action="submit/IR-F-2.php" method="POST">
+        <div class="row">
+            <div class="col-12">
+                <div class="headertext" style="font-size: 50px;">&#160</div>
+            </div>
+        </div>
+        <br><br>
+        <div class="row">
+            <div class="col-4">
+                <div class="underlinelg">Response to incident</div>
+            </div>
+            <div class="col-8" style="display: flex;">
+                <div class="normalsm" style="align-self: center">(manager use only)</div>
+            </div>
+        </div>
+        <br>
+        <div class="row mb-3">
+            <div class="col-4">
+                <div class="normalboldmd">Name of reviewing manager:</div>
+            </div>
+            <div class="col-8">
+                <div class=" textinput" style="top: 0%; position: relative;">
+                    <input type="text" name="nameofmanager" class="form-control form-control-lg" placeholder="<?php echo $_SESSION['username'] ?>">
+                </div> 
+            </div>
+        </div>
+        <br>
+        <div class="row mb-3">
+            <div class="col-3">
+                <div class="normalboldmd">Phone:</div>
+            </div>
+            <div class="col-3">
+                <div class="textinput" style="top: 0%; position: relative;">
+                    <input type="text" name="f2phone" class="form-control form-control-lg" placeholder="">
+                </div> 
+            </div>
+            <div class="col-3">
+                <div class="normalboldmd">
+                    &#160 Position:
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="textinput">
+                    <input type="text" name="f2position" class="form-control form-control-lg">
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-6">
+                <div class="normalboldmd"> Is the incident a reportable incident?</div>
+            </div>
+            <div class="col-6">
+                <div class="textinput">
+                    <select name="reportable" style="font-size: 40px;" class="form-select form-select-lg">
+                        <option selected>---</option>
+                        <option value="1">Yes</option>
+                        <option value="2">No</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-12">
+                <div class="normalsm">
+                    If yes,the incident will need to be reported to the NDIS commissioner within 24 hours. Please refer to the <i>Report incident to the NDIS process</i> (located in the Centro app) for further information. 
+                </div>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-3">
+                <div class="normalboldmd">
+                    Reported to police?
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="textinput">
+                    <select name="reportedtopolice" style="font-size: 40px;" class="form-select form-select-lg">
+                        <option selected>---</option>
+                        <option value="1">Yes</option>
+                        <option value="2">No</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="normalboldmd">
+                    Notified parents, family or guardian?
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="textinput">
+                    <select name="notified" style="font-size: 40px;" class="form-select form-select-lg">
+                        <option selected>---</option>
+                        <option value="1">Yes</option>
+                        <option value="2">No</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row mb-3">
+            <div class="col-4">
+                <div class="normalboldmd">
+                    Reported to other body?
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="textinput">
+                    <select name="reportedtoother" style="font-size: 40px;" class="form-select form-select-lg">
+                        <option selected>---</option>
+                        <option value="1">Yes</option>
+                        <option value="2">No</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-6 textinput">
+                <input type="text" name="othername" class="form-control form-control-lg" placeholder="">
+            </div>
+        </div>
+        <br><br>
+        <div>
+            <button type="button" class="btn btn-success" style="--bs-btn-padding-y: 1rem; --bs-btn-padding-x: 2rem; --bs-btn-font-size: 3rem;" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                Sumbit form
+            </button>
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h1 class="modal-title normal" id="staticBackdropLabel" style="font-weight: 600;">Submit form?</h1>
+                    <button type="button"  class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="--bs-btn-padding-y: 1rem; --bs-btn-padding-x: 2rem; --bs-btn-font-size: 3rem;"></button>
+                    </div>
+                    <div class="modal-body normal">
+                        Are you sure that all the required fields are filled out and accurate? <br><br> This action cannot be undone.
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" style="--bs-btn-padding-y: 1rem; --bs-btn-padding-x: 2rem; --bs-btn-font-size: 3rem;" class="btn btn-danger" data-bs-dismiss="modal">No
+                    </button>
+                    <input type="submit" name="formSubmit"  style="--bs-btn-padding-y: 1rem; --bs-btn-padding-x: 2rem; --bs-btn-font-size: 3rem;" value="Submit" class="btn btn-success"></input>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html> 
