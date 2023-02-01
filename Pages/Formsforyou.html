@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="GoodTurnServices online forms">
+    <meta name="keywords" content="GoodTurnServices">
+    <meta name="author" content="Prashan Wijesinghe">
+    <link rel="icon" type="image/x-icon" href="../Images/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/Login.css">   
+    <title>Home</title>
+    <link href="../css/bootstrap_norm.min.css" rel="stylesheet">
+    <script src="../js/bootstrap.bundle.min.js"></script>
+</head>
+    <?php
+    session_start();
+    if($_SESSION["loggedin"] == false){
+        $_SESSION['Desuri'] = "location: ../Pages/Formsforyou.php";
+        header("location: ../Backend/login.php");
+        exit();
+    }   
+    ?>
+<html>
+    <body>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+            <a class="navbar-brand" href="#">GTS Online Forms</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="Homepage.php">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../Backend/Logout.php">Logout</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    More
+                    </a>
+                    <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="Formselection.php">Fill out a form</a></li>
+                    <li><a class="dropdown-item" href="#">Forms submitted to you</a></li>
+                    <li><a class="dropdown-item" href="#">Your submitted forms</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="../index.php">Splash page</a></li>
+                    </ul>
+                </li>
+                </ul>
+                <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+            </div>
+        </nav>
