@@ -25,7 +25,7 @@
     }
     ?>
     <div id="Form_to_save">
-        <form style="margin: 190px;" action="../../Backend/Submitforms/IR-F.php" method="POST">
+        <form style="margin: 190px;" action="submit/IR-F.php" method="POST">
             <div class="row">
                 <div class="col-12">
                     <div class="headertext">Incident report</div>
@@ -43,7 +43,7 @@
                 </div>
                 <div class="col-6">
                     <div class="mb-3 textinput" style="top: 0%; position: relative;">
-                        <input type="text" name="nameofworker" class="form-control form-control-lg" id="exampleFormControlInput1" placeholder="John Doe">
+                        <input type="text" name="nameofworker" class="form-control form-control-lg" placeholder="John Doe">
                     </div>                  
                 </div>
             </div>
@@ -54,7 +54,7 @@
                 </div>
                 <div class="col-6">
                     <div class="mb-3 textinput" style="top: 0%; position: relative;">
-                        <input type="text" name="nameofparticipant" class="form-control form-control-lg" id="exampleFormControlInput1" placeholder="John Doe">
+                        <input type="text" name="nameofparticipant" class="form-control form-control-lg" placeholder="John Doe">
                     </div> 
                 </div>
             </div>
