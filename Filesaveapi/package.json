@@ -1,0 +1,16 @@
+{
+  "name": "filesaveapi",
+  "version": "1.0.0",
+  "description": "file save api for gts online forms",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "prashan",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "puppeteer": "^19.6.0"
+  }
+}
