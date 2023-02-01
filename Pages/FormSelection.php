@@ -62,19 +62,19 @@
                   <h1 class="fw-light">Form Selection</h1>
                   <p class="lead text-muted">Choose which form you would like to fill out here, if you can't find a form, please raise a ticket at our helpdesk</p>
                   <div class="row justify-content-md-center">
-                    
-                    <div class="">
-                        <nav aria-label="Page navigation example" class="mx-auto">
-                            <ul class="pagination">
-                              <li class="page-item disabled"><a class="page-link">Previous</a></li>
-                              <li class="page-item active"><a class="page-link">1</a></li>
-                              <li class="page-item"><a class="page-link" href="FormSelection2.php">2</a></li>
-                              <li class="page-item"><a class="page-link" href="FormSelection3.php">3</a></li>
-                              <li class="page-item"><a class="page-link" href="FormSelection2.php">Next</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                    
+                    <div class="col-3"></div>
+                      <div class="col-6">
+                          <nav aria-label="Page navigation example" class="mx-auto">
+                              <ul class="pagination">
+                                <li class="page-item"><a class="page-link" href="FormSelection.php">Previous</a></li>
+                                <li class="page-item"><a class="page-link" href="FormSelection.php">1</a></li>
+                                <li class="page-item active"><a class="page-link">2</a></li>
+                                <li class="page-item"><a class="page-link" href="FormSelection3.php">3</a></li>
+                                <li class="page-item"><a class="page-link" href="FormSelection3.php">Next</a></li>
+                              </ul>
+                          </nav>
+                      </div>
+                    <div class="col-3"></div>
                   </div>
                 </div>
               </div>
