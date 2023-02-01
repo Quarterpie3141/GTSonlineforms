@@ -97,7 +97,7 @@
                     <div class="card-body">
                       <h5 class="card-title">Forms submitted to you</h5>
                       <p class="card-text">Forms that others have submitted to be filled in or completed by you.</p>
-                      <a href="#" class="btn btn-primary">Take me there</a>
+                      <a href="formsforyou.php" class="btn btn-primary">Take me there</a>
                     </div>
                   </div>
                   <div class="alert alert-success mx-auto" style="width: 18rem" role="alert">
