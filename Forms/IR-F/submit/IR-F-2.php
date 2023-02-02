@@ -21,7 +21,6 @@ if( $_POST['formSubmit'] == "Submit"){
     $assignedto = $_POST['assignedto'];
 }
 require_once "../../../Backend/config.php";
-$frmid = $_GET['formid'];
 $sql = "UPDATE ir_f_db SET Nameofmanager = '$varnameofmanager',
 F2phone = '$varf2phone',
 F2position = '$varf2position',
