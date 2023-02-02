@@ -132,7 +132,7 @@ VALUES
 '$varImmediateactionstaken', 
 '$varUserconsent',
 '$id',
-'$assignedto'
+'$assignedto',
 '1')";
 // to do add position of worker to the sql database
 if($conn->query($sql) === TRUE){
