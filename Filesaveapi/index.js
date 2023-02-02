@@ -63,7 +63,7 @@ app.post('/saveformhif', (req, res) => {
       console.log("puppeteer has launched")
     const page = await browser.newPage();
 
-    const website_url = 'https://localhost/gtsonlineforms/backend/Convertforms/HI-F.php?formid=' + formid; 
+    const website_url = 'https://localhost/gtsonlineforms/Forms/HI-F/Convert/HI-F.php?formid=' + formid; 
   
     await page.goto(website_url, { waitUntil: 'networkidle0' }); 
     console.log("processing form.")
