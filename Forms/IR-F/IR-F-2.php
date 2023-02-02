@@ -57,7 +57,6 @@
     ?>
 <body>
     <div id="Form_to_save">
-        <form style="margin: 190px;" action="../Backend/IR-F.php" method="POST">
             <div class="row">
                 <div class="col-12">
                     <div class="headertext">Incident report</div>
