@@ -639,6 +639,24 @@
                 <input type="text" name="othername" class="form-control form-control-lg" placeholder="">
             </div>
         </div>
+        <div class="row mt-3">
+                <div class="col-12">
+                    <div class="textinput">
+                        <select name="assignedto" style="font-size: 40px;" class="form-select form-select-lg">
+                            <option selected>Assign to (please select)</option>
+                            <?php
+                            $lp = "0";
+                            while($lp < count($usr_lgns)){
+                                $nm = $usr_lgns[$lp];
+                                $nmc = $nm[0];
+                                echo "<option value='$nmc'> $nmc </option>";
+                                $lp++;
+                            }
+                            ?>
+                        </select>
+                    </div>
+                </div>
+            </div>
         <br><br>
         <div>
             <button type="button" class="btn btn-success" style="--bs-btn-padding-y: 1rem; --bs-btn-padding-x: 2rem; --bs-btn-font-size: 3rem;" data-bs-toggle="modal" data-bs-target="#staticBackdrop">

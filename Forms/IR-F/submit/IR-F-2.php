@@ -17,17 +17,38 @@ if( $_POST['formSubmit'] == "Submit"){
     $varnotified = $_POST['notified'];
     $varreportedtoother = $_POST['reportedtoother'];
     $varothername = $_POST['othername'];
+    $frmid = $_POST['formid'];
+    $assignedto = $_POST['assignedto'];
 }
 require_once "../../../Backend/config.php";
 $frmid = $_GET['formid'];
-$sql = "UPDATE ir_f_db SET Nameofmanager,
-F2phone,
-F2position,
-Reportable,
-Reportedtopolice,
-Notified,
-Reportedtoother,
-othername
+$sql = "UPDATE ir_f_db SET Nameofmanager = '$varnameofmanager',
+F2phone = '$varf2phone',
+F2position = '$varf2position',
+Reportable = '$varreportable',
+Reportedtopolice = '$varreportedtopolice',
+Notified = '$varnotified',
+Reportedtoother = '$varreportedtoother',
+othername = '$varothername',
+assignedto = '$assignedto'
 WHERE 
-formid
-"
+formid = $frmid
+";
+if($conn->query($sql) === TRUE){
+    echo "Data submitted successfully";
+    $conn->close();
+    $ch = curl_init("localhost:3000/saveformirf?formid=" . $frmid);
+    curl_setopt($ch, CURLOPT_POST, 1);
+    // Execute the cURL request
+    $result = curl_exec($ch);
+    curl_close($ch);
+    $_SESSION['datasbm'] = 0; // success code see homepage.php for more details 
+    header("Location: ../../../Pages/HomePage.php");
+    exit();
+} else{
+    $_SESSION['datasbm'] = 1; //error code 
+    $conn->close();
+    echo "Error submitting data: " . $sql . "<br>";
+    header("Location: ../../../Pages/HomePage.php");
+    exit();
+}
