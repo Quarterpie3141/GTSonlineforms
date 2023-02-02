@@ -54,6 +54,7 @@
     mysqli_stmt_store_result($stmt);
     mysqli_stmt_bind_result($stmt, $varNameofworker, $varNameofparticipant, $varPhonenumber, $varDate, $varTime, $varLocationofincident, $varAbuseassult, $varBreachofprivacy, $varBehaviour, $varDeath, $varInjury, $varMedication, $varPoorqualityofcare, $varPropertydamage, $varRestrictivepractice, $varOther, $varOtherdetails, $var1firstname, $var1lastname, $var1phonenumber, $var1email, $var1witness, $var1injured, $var2firstname, $var2lastname, $var2phonenumber, $var2email, $var2witness, $var2injured, $var3firstname, $var3lastname, $var3phonenumber, $var3email, $var3witness, $var3injured, $var4firstname, $var4lastname, $var4phonenumber, $var4email, $var4witness, $var4injured, $var5firstname, $var5lastname, $var5phonenumber, $var5email, $var5witness, $var5injured, $var6firstname, $var6lastname, $var6phonenumber, $var6email, $var6witness, $var6injured, $varWhathappened, $varImmediateactionstaken, $varUserconsent);
     mysqli_stmt_fetch($stmt);
+    mysqli_stmt_close($stmt);
     ?>
 <body>
 
@@ -645,6 +646,10 @@
                         <select name="assignedto" style="font-size: 40px;" class="form-select form-select-lg">
                             <option selected>Assign to (please select)</option>
                             <?php
+                            require_once "../../Backend/config.php";
+                            $sql = "SELECT username FROM usr_lgns ORDER BY id";
+                            $result = $conn -> query($sql);
+                            $usr_lgns = $result -> fetch_all(MYSQLI_NUM);
                             $lp = "0";
                             while($lp < count($usr_lgns)){
                                 $nm = $usr_lgns[$lp];
