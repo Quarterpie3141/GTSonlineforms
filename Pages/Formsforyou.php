@@ -74,7 +74,7 @@
 
             echo "
                         <div class='container'>
-                            <a href='#' class='list-group-item list-group-item-action d-flex gap-3 py-3' aria-current='true'>
+                            <a href='../Forms/IR-F/IR-F-2.php?formid=$frmid' class='list-group-item list-group-item-action d-flex gap-3 py-3' aria-current='true'>
                                 <img src='../Images/HomePage/alert.png' alt='twbs' class='rounded-circle flex-shrink-0' width='32' height='32'>
                                     <div class='d-flex gap-2 w-100 justify-content-between'>
                                             <div>
