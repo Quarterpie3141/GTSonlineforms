@@ -19,6 +19,7 @@ if( $_POST['formSubmit'] == "Submit"){
     $varothername = $_POST['othername'];
 }
 require_once "../../../Backend/config.php";
+$frmid = $_GET['formid'];
 $sql = "UPDATE ir_f_db SET Nameofmanager,
 F2phone,
 F2position,
