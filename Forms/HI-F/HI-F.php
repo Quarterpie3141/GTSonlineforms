@@ -22,7 +22,7 @@
         exit();
     }
     ?>
-    <form style="margin: 190px;" action="sumbit/HI-F.php" method="POST">
+    <form style="margin: 190px;" action="submit/HI-F.php" method="POST">
         <div class="row">
             <div class="col-12">
                 <div class="headertext"><b>House Inspection</b></div>
