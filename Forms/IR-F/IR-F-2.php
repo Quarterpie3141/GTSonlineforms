@@ -56,7 +56,8 @@
     mysqli_stmt_fetch($stmt);
     ?>
 <body>
-    <div id="">
+
+    <div style="margin: 190px;">
             <div class="row">
                 <div class="col-12">
                     <div class="headertext">Incident report</div>
@@ -515,7 +516,7 @@
                 </div>
             </div>
     </div>
-    
+
     <form style="margin: 190px;" action="submit/IR-F-2.php" method="POST">
         <div class="row">
             <div class="col-12">
