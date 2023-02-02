@@ -62,9 +62,9 @@
         </div>
 
         <?php
-        require_once("../../../Backend/config.php");
+        require_once("../Backend/config.php");
         $param_usrname = $_SESSION["username"];
-        $sql = "SELECT formid FROM ir_f_db WHERE assignedto = $param_usrname";
+        $sql = "SELECT formid FROM ir_f_db WHERE assignedto = '$param_usrname'";
         $result = $conn -> query($sql);
         $usr_frms = $result -> fetch_all(MYSQLI_NUM);
         $lp = "0";
