@@ -528,8 +528,11 @@
             <div class="col-4">
                 <div class="underlinelg">Response to incident</div>
             </div>
-            <div class="col-8" style="display: flex;">
+            <div class="col-7" style="display: flex;">
                 <div class="normalsm" style="align-self: center">(manager use only)</div>
+            </div>
+            <div class="col-1">
+                <input type="number" name="formid" disabled class="form-control" value="<?php echo $_GET['formid'] ?>">
             </div>
         </div>
         <br>
