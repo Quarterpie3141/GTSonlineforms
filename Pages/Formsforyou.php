@@ -79,7 +79,7 @@
                                     <div class='d-flex gap-2 w-100 justify-content-between'>
                                             <div>
                                                 <h6 class='mb-0'>Incident Report Form #$frmid</h6>
-                                                <p class='mb-0 opacity-75'>An incident report form has been submitted to be filled out buy you</p>
+                                                <p class='mb-0 opacity-75'>An incident report form has been submitted to be filled out by you</p>
                                             </div>
                                         <small class='opacity-50 text-nowrap'>IR-F</small>
                                     </div>
