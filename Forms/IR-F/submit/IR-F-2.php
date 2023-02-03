@@ -30,7 +30,8 @@ Reportedtopolice = '$varreportedtopolice',
 Notified = '$varnotified',
 Reportedtoother = '$varreportedtoother',
 othername = '$varothername',
-assignedto = '$assignedto'
+assignedto = '$assignedto',
+stage = '2'
 WHERE 
 formid = $frmid
 ";

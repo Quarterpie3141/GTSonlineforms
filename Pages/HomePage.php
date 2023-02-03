@@ -83,7 +83,7 @@
           <div class="row">
             <div class="col-lg-4 col-sm-12">
                 <div class="card mx-auto" style="width: 18rem; height: 34rem">
-                    <img src="../Images/HomePage/Form.png" class="card-img-top" alt="...">
+                    <a href="FormSelection.php"><img src="../Images/HomePage/Form.png" class="card-img-top" alt="..."></a>
                     <div class="card-body">
                       <h5 class="card-title">Fill out a form</h5>
                       <p class="card-text">Fill out forms or paperwork thats avalible to you.</p>
