@@ -24,7 +24,7 @@
         exit();
     }
     require_once "../../Backend/config.php";
-    $zero = "0";
+    $zero = "2";
     $sql = "SELECT username FROM usr_lgns WHERE priv = $zero";
     $result = $conn -> query($sql);
     $usr_lgns = $result -> fetch_all(MYSQLI_NUM); 
