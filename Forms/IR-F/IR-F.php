@@ -23,11 +23,6 @@
         header("location: ../../Backend/login.php");
         exit();
     }
-    require_once "../../Backend/config.php";
-    $zero = "2";
-    $sql = "SELECT username FROM usr_lgns WHERE priv = $zero";
-    $result = $conn -> query($sql);
-    $usr_lgns = $result -> fetch_all(MYSQLI_NUM); 
     ?>
     <div id="Form_to_save">
         <form style="margin: 190px;" action="submit/IR-F.php" method="POST">
@@ -486,24 +481,6 @@
                             &#160I hereby confirm that the information provided in this report is accurate to the best of my knowledge
                         </label>
                     </div>                  
-                </div>
-            </div>
-            <div class="row mt-3">
-                <div class="col-12">
-                    <div class="textinput">
-                        <select name="assignedto" style="font-size: 40px;" class="form-select form-select-lg">
-                            <option selected>Assign to (please select)</option>
-                            <?php
-                            $lp = "0";
-                            while($lp < count($usr_lgns)){
-                                $nm = $usr_lgns[$lp];
-                                $nmc = $nm[0];
-                                echo "<option value='$nmc'> $nmc </option>";
-                                $lp++;
-                            }
-                            ?>
-                        </select>
-                    </div>
                 </div>
             </div>
             <div>

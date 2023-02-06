@@ -68,7 +68,7 @@ session_start();
     $varImmediateactionstaken = $_POST['immediateactionstaken'];//mediumtext(1677215)
     $varUserconsent = $_POST['userconsent']; //bool
     $id = $_SESSION['id'];
-    $assignedto = $_POST['assignedto'];
+    $assignedto = "manager";
    
 }
 
@@ -101,7 +101,9 @@ Immediateactionstaken,
 Userconsent,
 id,
 assignedto,
-stage) 
+stage,
+complete
+) 
             
 VALUES 
 
@@ -133,7 +135,9 @@ VALUES
 '$varUserconsent',
 '$id',
 '$assignedto',
-'1')";
+'1',
+'0'
+)";
 // to do add position of worker to the sql database
 if($conn->query($sql) === TRUE){
     echo "Data submitted successfully";

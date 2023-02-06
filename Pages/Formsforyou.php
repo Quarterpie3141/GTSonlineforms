@@ -62,23 +62,28 @@
         </div>
 
         <?php
+        if($_SESSION['priv'] == "2"){
         require_once("../Backend/config.php");
-        $param_usrname = $_SESSION["username"];
-        $sql = "SELECT formid FROM ir_f_db WHERE assignedto = '$param_usrname'";
+        $sql = "SELECT formid FROM ir_f_db WHERE complete = '0'";
         $result = $conn -> query($sql);
         $usr_frms = $result -> fetch_all(MYSQLI_NUM);
         $lp = "0";
         while($lp < count($usr_frms)) {
             $arry = $usr_frms[$lp];
             $frmid = $arry[0];
+            $sql = "SELECT stage FROM ir_f_db WHERE formid = '$frmid'";
+            $stageresult = $conn -> query($sql);
+            $stagerslt = $stageresult -> fetch_all(MYSQLI_NUM);
+            $stagearray = $stagerslt[0];
+            $stage = $stagearray[0];
 
             echo "
                         <div class='container'>
-                            <a href='../Forms/IR-F/IR-F-2.php?formid=$frmid' class='list-group-item list-group-item-action d-flex gap-3 py-3' aria-current='true'>
+                            <a href='../Forms/IR-F/IR-F-$stage.php?formid=$frmid' class='list-group-item list-group-item-action d-flex gap-3 py-3' aria-current='true'>
                                 <img src='../Images/HomePage/alert.png' alt='twbs' class='rounded-circle flex-shrink-0' width='32' height='32'>
                                     <div class='d-flex gap-2 w-100 justify-content-between'>
                                             <div>
-                                                <h6 class='mb-0'>Incident Report Form #$frmid</h6>
+                                                <h6 class='mb-0'>Incident Report Form #$frmid ($stage)</h6>
                                                 <p class='mb-0 opacity-75'>An incident report form has been submitted to be filled out by you</p>
                                             </div>
                                         <small class='opacity-50 text-nowrap'>IR-F</small>
@@ -86,9 +91,46 @@
                             </a>
                         </div>
             ";
-            
+            $conn -> close();  
             $lp++;
         }
+        $conn -> close();  
+        }
+
+        require_once("../Backend/config.php");
+        $param_usrname = $_SESSION["username"];
+        $sql = "SELECT formid FROM ir_f_db WHERE assignedto = $param_usrname";
+        $result = $conn -> query($sql);
+        $usr_frms = $result -> fetch_all(MYSQLI_NUM);
+        $lp = "0";
+        while($lp < count($usr_frms)) {
+            $arry = $usr_frms[$lp];
+            $frmid = $arry[0];
+            $sql = "SELECT stage FROM ir_f_db WHERE formid = '$frmid'";
+            $stageresult = $conn -> query($sql);
+            $stagerslt = $stageresult -> fetch_all(MYSQLI_NUM);
+            $stagearray = $stagerslt[0];
+            $stage = $stagearray[0];
+
+            echo "
+                        <div class='container'>
+                            <a href='../Forms/IR-F/IR-F-$stage.php?formid=$frmid' class='list-group-item list-group-item-action d-flex gap-3 py-3' aria-current='true'>
+                                <img src='../Images/HomePage/alert.png' alt='twbs' class='rounded-circle flex-shrink-0' width='32' height='32'>
+                                    <div class='d-flex gap-2 w-100 justify-content-between'>
+                                            <div>
+                                                <h6 class='mb-0'>Incident Report Form #$frmid ($stage)</h6>
+                                                <p class='mb-0 opacity-75'>An incident report form has been submitted to be filled out by you</p>
+                                            </div>
+                                        <small class='opacity-50 text-nowrap'>IR-F</small>
+                                    </div>
+                            </a>
+                        </div>
+            ";
+            $conn -> close();  
+            $lp++;
+        }
+        $conn -> close();  
+        
         ?>
 
         <div class="container">
