@@ -31,7 +31,7 @@ Notified = '$varnotified',
 Reportedtoother = '$varreportedtoother',
 othername = '$varothername',
 assignedto = '$assignedto',
-stage = '2'
+stage = '3'
 WHERE 
 formid = $frmid
 ";

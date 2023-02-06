@@ -135,7 +135,7 @@ VALUES
 '$varUserconsent',
 '$id',
 '$assignedto',
-'1',
+'2',
 '0'
 )";
 // to do add position of worker to the sql database
