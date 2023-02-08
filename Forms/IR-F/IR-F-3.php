@@ -689,7 +689,7 @@
                     </div>
                 </div>
                 <div class="col-3 textinput">
-                    <input type="text" name="#" class="form-control form-control-lg" placeholder="">
+                    <input type="text" name="F3name" class="form-control form-control-lg" placeholder="">
                 </div>
                 <div class="col-3">
                     <div class="normalboldmd">
@@ -697,7 +697,7 @@
                     </div>
                 </div>
                 <div class="col-3 textinput">
-                    <input name="#" class="form-control" type="date" />
+                    <input name="F3date" class="form-control" type="date" />
                 </div>
             </div>
             <br>
@@ -708,7 +708,7 @@
                     </div>
                 </div>
                 <div class="col-3 textinput">
-                    <input type="text" name="#" class="form-control form-control-lg" placeholder="">
+                    <input type="text" name="F3position" class="form-control form-control-lg" placeholder="">
                 </div>
                 <div class="col-3">
                     <div class="normalboldmd">
@@ -716,7 +716,7 @@
                     </div>
                 </div>
                 <div class="col-3 textinput">
-                    <input name="#" class="form-control" type="text"/>
+                    <input name="F3phone" class="form-control" type="text"/>
                 </div>
             </div>
             <br>
@@ -733,14 +733,14 @@
                     </div>
                 </div>
                 <div class="col-1 textinput">
-                    <input name="#" class="form-control" type="number"/>
+                    <input name="daystaken" class="form-control" type="number"/>
                 </div>
             </div>
             <br>
             <div class="row">
                 <div class="col-12">
                     <div class="textareaborder">
-                        <textarea class="form-control" name="#" rows="10"></textarea>
+                        <textarea class="form-control" name="summaryoffindings" rows="10"></textarea>
                     </div>
                 </div>
             </div>
@@ -759,6 +759,7 @@
                         <div class="modal-body normal">
                             Are you sure that all the required fields are filled out and accurate? <br><br> This action cannot be undone.
                         </div>
+                        <input type="number" name="formid" class="form-control" value="<?php echo $_GET['formid'] ?>">
                         <div class="modal-footer">
                         <button type="button" style="--bs-btn-padding-y: 1rem; --bs-btn-padding-x: 2rem; --bs-btn-font-size: 3rem;" class="btn btn-danger" data-bs-dismiss="modal">No
                         </button>

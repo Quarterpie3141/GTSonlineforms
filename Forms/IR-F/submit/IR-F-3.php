@@ -9,30 +9,24 @@
 <?php
 session_start();
 if( $_POST['formSubmit'] == "Submit"){
-    $varnameofmanager = $_POST['nameofmanager']; 
-    $varf2phone = $_POST['f2phone'];
-    $varf2position = $_POST['f2position'];
-    $varreportable = $_POST['reportable'];
-    $varreportedtopolice = $_POST['reportedtopolice'];
-    $varnotified = $_POST['notified'];
-    $varreportedtoother = $_POST['reportedtoother'];
-    $varothername = $_POST['othername'];
+    $varF3name = $_POST['F3name']; 
+    $varF3date = $_POST['F3date'];
+    $varF3position = $_POST['F3position'];
+    $varF3phone = $_POST['F3phone'];
+    $vardaystaken = $_POST['daystaken'];
+    $varsummaryoffindings = $_POST['summaryoffindings'];
     $frmid = $_POST['formid'];
-    $assignedto = $_POST['assignedto'];
 }
-var_dump($_POST);
+
 require_once "../../../Backend/config.php";
-$sql = "UPDATE ir_f_db SET Nameofmanager = '$varnameofmanager',
-F2phone = '$varf2phone',
-F2position = '$varf2position',
-Reportable = '$varreportable',
-Reportedtopolice = '$varreportedtopolice',
-Notified = '$varnotified',
-Reportedtoother = '$varreportedtoother',
-othername = '$varothername',
-assignedto = '$assignedto',
-stage = '3',
-complete = '1'
+$sql = "UPDATE ir_f_db SET F3name = '$varF3name',
+F3date = '$varF3date',
+F3position = '$varF3position',
+F3phone = '$varF3phone',
+daystaken = '$vardaystaken',
+summaryoffindings = '$varsummaryoffindings',
+stage = '4',
+complete = '0'
 WHERE 
 formid = $frmid
 ";
