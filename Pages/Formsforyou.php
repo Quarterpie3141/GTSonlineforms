@@ -126,7 +126,6 @@
                             </a>
                         </div>
             ";
-            $conn -> close();  
             $lp++;
         }
         $conn -> close();  
