@@ -93,7 +93,7 @@
             ";
             $lp++;
         }
-        $conn -> close();  
+    
         }
 
         require_once("../Backend/config.php");
@@ -127,7 +127,7 @@
             ";
             $lp++;
         }
-        $conn -> close();  
+        
         
         ?>
 
@@ -143,3 +143,4 @@
                 </div>
             </a>
         </div>
+<?php $conn -> close();  ?>
