@@ -52,7 +52,7 @@
     Reportedtopolice,
     Notified,
     Reportedtoother,
-    othername,
+    othername
      FROM ir_f_db WHERE formid = ?";
 
     $stmt = mysqli_prepare($conn, $sql);
