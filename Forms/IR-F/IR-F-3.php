@@ -745,6 +745,7 @@
                 </div>
             </div>
             <br><br>
+            <input type="number" name="formid" class="form-control" value="<?php echo $_GET['formid'] ?>">
             <div>
                 <button type="button" class="btn btn-success" style="--bs-btn-padding-y: 1rem; --bs-btn-padding-x: 2rem; --bs-btn-font-size: 3rem;" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                     Sumbit form
@@ -759,7 +760,7 @@
                         <div class="modal-body normal">
                             Are you sure that all the required fields are filled out and accurate? <br><br> This action cannot be undone.
                         </div>
-                        <input type="number" name="formid" class="form-control" value="<?php echo $_GET['formid'] ?>">
+                        
                         <div class="modal-footer">
                         <button type="button" style="--bs-btn-padding-y: 1rem; --bs-btn-padding-x: 2rem; --bs-btn-font-size: 3rem;" class="btn btn-danger" data-bs-dismiss="modal">No
                         </button>
