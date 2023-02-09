@@ -779,7 +779,7 @@
             <div class="row mb-3">
                 <div class="col-12">
                     <div class="textareaborder">
-                        <textarea class="form-control" name="whathappened" rows="12" placeholder="Type here"></textarea>
+                        <textarea class="form-control" name="whatchanges" rows="12" placeholder="Type here"></textarea>
                     </div>
                 </div>
             </div>
@@ -793,7 +793,7 @@
             <div class="row mb-3">
                 <div class="col-12">
                     <div class="textareaborder">
-                        <textarea class="form-control" name="whathappened" rows="6" placeholder="Type here"></textarea>
+                        <textarea class="form-control" name="additionaltraining" rows="6" placeholder="Type here"></textarea>
                     </div>
                 </div>
             </div>
@@ -807,7 +807,7 @@
             <div class="row mb-3">
                 <div class="col-12">
                     <div class="textareaborder">
-                        <textarea class="form-control" name="whathappened" rows="6" placeholder="Type here"></textarea>
+                        <textarea class="form-control" name="updateplans" rows="6" placeholder="Type here"></textarea>
                     </div>
                 </div>
             </div>
@@ -830,7 +830,7 @@
                     </div>
                 </div>
                 <div class="col-2">
-                    <input class="form-check-input" name="propertydamage" type="checkbox" style="border: 5px solid rgb(0, 0, 0);">
+                    <input class="form-check-input" name="appropiatefeedback" type="checkbox" style="border: 5px solid rgb(0, 0, 0);">
                 </div>
             </div>
             <br><br>
@@ -841,7 +841,7 @@
                     </div>
                 </div>
                 <div class="col-2">
-                    <input class="form-check-input" name="propertydamage" type="checkbox" style="border: 5px solid rgb(0, 0, 0);">
+                    <input class="form-check-input" name="opportunities" type="checkbox" style="border: 5px solid rgb(0, 0, 0);">
                 </div>
             </div>
             <br><br>

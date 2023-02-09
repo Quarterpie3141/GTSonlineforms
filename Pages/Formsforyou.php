@@ -62,7 +62,10 @@
         </div>
 
         <?php
-        if($_SESSION['priv'] == "2"){
+
+         //if the user is priv 2 or higher then check for incomplete incident report forms(Regardless of assigned to)  
+
+        if($_SESSION['priv'] <= "2"){              
         require_once("../Backend/config.php");
         $sql = "SELECT formid FROM ir_f_db WHERE complete = '0'";
         $result = $conn -> query($sql);
@@ -95,6 +98,8 @@
         }
     
         }
+        
+        //check for any incident report foorms assigned to user(regardless of user priv)
 
         require_once("../Backend/config.php");
         $param_usrname = $_SESSION["username"];
