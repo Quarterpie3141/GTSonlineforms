@@ -1,82 +1,18 @@
-
 <!DOCTYPE html>
 <head>
-    
     <meta charset="UTF-8">
     <meta name="description" content="GoodTurnServices online Incident Report form">
     <meta name="keywords" content="GoodTurnServices">
     <meta name="author" content="Prashan Wijesinghe">
-    <meta name="viewport" content="width=device-width, initial-scale=0.2">  
-    <link href="../../../css/bootstrap.min.css" rel="stylesheet">
-    <script src="../../../js/bootstrap.bundle.min.js"></script>
-    <link href="../../../css/Form.css" rel="stylesheet">
-    
-    
+    <meta name="viewport" content="width=device-width, initial-scale=0.2">
+    <link rel="stylesheet" href="../../css/Form.css">  
+    <link rel="icon" type="image/x-icon" href="../../Images/favicon.png"> 
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <script src="../../js/bootstrap.bundle.min.js"></script>
+    <title>IR-F-4</title>
 </head> 
-<html lang="en" >
-<body>
-
-    <?php
-    $varNameofworker = ""; //varchar(255)
-    $varNameofparticipant = ""; //varchar(255)
-    $varPhonenumber = ""; //varchar(255)
-    $varPositionofworker = ""; //varchar(255)
-    $varDate = ""; //varchar(255)
-    $varTime = ""; //varchar(255)
-    $varLocationofincident = ""; //varchar(255)
-    $varAbuseassult = ""; //bool
-    $varBreachofprivacy = ""; //bool
-    $varBehaviour = ""; //bool
-    $varDeath = ""; //bool
-    $varInjury = ""; //bool
-    $varMedication = ""; //bool
-    $varPoorqualityofcare = ""; //bool
-    $varPropertydamage = ""; //bool
-    $varRestrictivepractice = ""; //bool
-    $varOther = ""; //bool
-    $varOtherdetails = ""; //varchar(255)
-    $var1firstname = ""; //varchar(255)
-    $var1lastname = ""; //varchar(255)
-    $var1phonenumber = ""; //varchar(255)
-    $var1email = ""; //varchar(255)
-    $var1witness = ""; //bool
-    $var1injured = ""; //bool
-    $var2firstname = ""; //varchar(255)
-    $var2lastname = ""; //varchar(255)
-    $var2phonenumber = ""; //varchar(255)
-    $var2email = ""; //varchar(255)
-    $var2witness = ""; //bool
-    $var2injured = ""; //bool
-    $var3firstname = ""; //varchar(255)
-    $var3lastname = ""; //varchar(255)
-    $var3phonenumber = ""; //varchar(255)
-    $var3email = ""; //varchar(255)
-    $var3witness = ""; //bool
-    $var3injured = ""; //bool
-    $var4firstname = ""; //varchar(255)
-    $var4lastname = ""; //varchar(255)
-    $var4phonenumber = ""; //varchar(255)
-    $var4email = ""; //varchar(255)
-    $var4witness = ""; //bool
-    $var4injured = ""; //bool
-    $var5firstname = ""; //varchar(255)
-    $var5lastname = ""; //varchar(255)
-    $var5phonenumber = ""; //varchar(255)
-    $var5email = ""; //varchar(255)
-    $var5witness = ""; //bool
-    $var5injured = ""; //bool
-    $var6firstname = ""; //varchar(255)
-    $var6lastname = ""; //varchar(255)
-    $var6phonenumber = ""; //varchar(255)
-    $var6email = ""; //varchar(255)
-    $var6witness = ""; //bool
-    $var6injured = ""; //bool
-    $varWhathappened = ""; //mediumtext(1677215)
-    $varImmediateactionstaken = "";//mediumtext(1677215)
-    $varUserconsent = ""; //bool........................................
-    $id = "";
-
-    require_once "../../../Backend/config.php";
+<?php
+    require_once "../../Backend/config.php";
     $sql = "SELECT Nameofworker,
     Nameofparticipant,
     Phonenumber,
@@ -102,19 +38,44 @@
     6firstname, 6lastname, 6phonenumber, 6email, 6witness, 6injured,
     Whathappened, 
     Immediateactionstaken, 
-    Userconsent FROM ir_f_db WHERE formid = ?";
+    Userconsent,
+    Nameofmanager,
+    F2phone,
+    F2position,
+    Reportable,
+    Reportedtopolice,
+    Notified,
+    Reportedtoother,
+    othername,
+    F3name,
+    F3date,
+    F3position,
+    F3phone,
+    daystaken,
+    summaryoffindings,
+    whatchanges,
+    additionaltraining,
+    updateplans,
+    appropiatefeedback,
+    opportunities,
+    managerconsent
+     FROM ir_f_db WHERE formid = ?";
 
     $stmt = mysqli_prepare($conn, $sql);
     mysqli_stmt_bind_param($stmt, "i", $param_formid);       
     $param_formid = $_GET["formid"];
     mysqli_stmt_execute($stmt);
     mysqli_stmt_store_result($stmt);
-    mysqli_stmt_bind_result($stmt, $varNameofworker, $varNameofparticipant, $varPhonenumber, $varDate, $varTime, $varLocationofincident, $varAbuseassult, $varBreachofprivacy, $varBehaviour, $varDeath, $varInjury, $varMedication, $varPoorqualityofcare, $varPropertydamage, $varRestrictivepractice, $varOther, $varOtherdetails, $var1firstname, $var1lastname, $var1phonenumber, $var1email, $var1witness, $var1injured, $var2firstname, $var2lastname, $var2phonenumber, $var2email, $var2witness, $var2injured, $var3firstname, $var3lastname, $var3phonenumber, $var3email, $var3witness, $var3injured, $var4firstname, $var4lastname, $var4phonenumber, $var4email, $var4witness, $var4injured, $var5firstname, $var5lastname, $var5phonenumber, $var5email, $var5witness, $var5injured, $var6firstname, $var6lastname, $var6phonenumber, $var6email, $var6witness, $var6injured, $varWhathappened, $varImmediateactionstaken, $varUserconsent);
+    mysqli_stmt_bind_result($stmt, $varNameofworker, $varNameofparticipant, $varPhonenumber, $varDate, $varTime, $varLocationofincident, $varAbuseassult, $varBreachofprivacy, $varBehaviour, $varDeath, $varInjury, $varMedication, $varPoorqualityofcare, $varPropertydamage, $varRestrictivepractice, $varOther, $varOtherdetails, $var1firstname, $var1lastname, $var1phonenumber, $var1email, $var1witness, $var1injured, $var2firstname, $var2lastname, $var2phonenumber, $var2email, $var2witness, $var2injured, $var3firstname, $var3lastname, $var3phonenumber, $var3email, $var3witness, $var3injured, $var4firstname, $var4lastname, $var4phonenumber, $var4email, $var4witness, $var4injured, $var5firstname, $var5lastname, $var5phonenumber, $var5email, $var5witness, $var5injured, $var6firstname, $var6lastname, $var6phonenumber, $var6email, $var6witness, $var6injured, $varWhathappened, $varImmediateactionstaken, $varUserconsent, $varnameofmanager, $varf2phone, $varf2position, $varreportable, $varreportedtopolice, $varnotified, $varreportedtoother, $varothername, $varF3name, $varF3date, $varF3position, $varF3phone, $vardaystaken, $varsummaryoffindings, $varwhatchanges, $varadditionaltraining, $varupdateplans, $varappropiatefeedback, $varopportunities, $varmanagerconsent);
     mysqli_stmt_fetch($stmt);
-    ?>
+    mysqli_stmt_close($stmt);
+    
 
-    <div id="Form_to_save">
-        <form style="margin: 190px;" action="../Backend/IR-F.php" method="POST">
+?>
+<html lang="en" >
+    <body>
+
+    <div style="margin: 190px;">
             <div class="row">
                 <div class="col-12">
                     <div class="headertext">Incident report</div>
@@ -572,15 +533,348 @@
                     </div>                  
                 </div>
             </div>
-            </div>
-            </div>
-            </div>
-        </form>
     </div>
-</body>
 
+    <div style="margin: 190px;">
+        <div class="row">
+            <div class="col-12">
+                <div class="headertext" style="font-size: 50px;">&#160</div>
+            </div>
+        </div>
+        <br><br>
+        <div class="row">
+            <div class="col-4">
+                <div class="underlinelg">Response to incident</div>
+            </div>
+            <div class="col-7" style="display: flex;">
+                <div class="normalsm" style="align-self: center">(manager use only)</div>
+            </div>
+        </div>
+        <br>
+        <div class="row mb-3">
+            <div class="col-4">
+                <div class="normalboldmd">Name of reviewing manager:</div>
+            </div>
+            <div class="col-8">
+                <div class=" textinput" style="top: 0%; position: relative;">
+                    <input type="text" name="nameofmanager" class="form-control form-control-lg" value="<?php echo $varnameofmanager;?>">
+                </div> 
+            </div>
+        </div>
+        <br>
+        <div class="row mb-3">
+            <div class="col-3">
+                <div class="normalboldmd">Phone:</div>
+            </div>
+            <div class="col-3">
+                <div class="textinput" style="top: 0%; position: relative;">
+                    <input type="text" name="f2phone" class="form-control form-control-lg" value="<?php echo $varf2phone ?>">
+                </div> 
+            </div>
+            <div class="col-3">
+                <div class="normalboldmd">
+                    &#160 Position:
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="textinput">
+                    <input type="text" name="f2position" class="form-control form-control-lg" value="<?php echo $varf2position ?>">
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-6">
+                <div class="normalboldmd"> Is the incident a reportable incident?</div>
+            </div>
+            <div class="col-6">
+                <div class="textinput">
+                    <select name="reportable" style="font-size: 40px;" class="form-select form-select-lg">
+                        <option selected><?php if ($varreportable == "1") {
+                            echo "Yes";
+                        } else {
+                            echo "No";} ?></option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-12">
+                <div class="normalsm">
+                    If yes,the incident will need to be reported to the NDIS commissioner within 24 hours. Please refer to the <i>Report incident to the NDIS process</i> (located in the Centro app) for further information. 
+                </div>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-3">
+                <div class="normalboldmd">
+                    Reported to police?
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="textinput">
+                    <select name="reportedtopolice" style="font-size: 40px;" class="form-select form-select-lg">
+                    <option selected><?php if ($varreportedtopolice == "1") {
+                            echo "Yes";
+                        } else {
+                            echo "No";} ?></option>
+                    </select>
+                    </select>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="normalboldmd">
+                    Notified parents, family or guardian?
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="textinput">
+                    <select name="notified" style="font-size: 40px;" class="form-select form-select-lg">
+                    <option selected><?php if ($varnotified == "1") {
+                            echo "Yes";
+                        } else {
+                            echo "No";} ?></option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row mb-3">
+            <div class="col-4">
+                <div class="normalboldmd">
+                    Reported to other body?
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="textinput">
+                    <select name="reportedtoother" style="font-size: 40px;" class="form-select form-select-lg">
+                    <option selected><?php if ($varreportedtoother == "1") {
+                            echo "Yes";
+                        } else {
+                            echo "No";} ?></option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-6 textinput">
+                <input type="text" name="othername" class="form-control form-control-lg" value="<?php echo $varothername ?>">
+            </div>
+        </div>
+        <br><br>
+    </div>
 
+    <div style="margin: 190px;">
+        <div class="row">
+            <div class="col-12">
+                <div class="headertext" style="font-size: 50px;">&#160</div>
+            </div>
+        </div>
+        <br><br>
+        <div class="row mb-3">
+            <div class="col-4">
+                <div class="underlinelg">
+                    Incident investigation
+                </div>
+            </div>
+            <div class="col-8" style="display: flex;">
+                <div class="normalsm" style="align-self: center;">
+                    (office use only)
+                </div>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="normalsm">
+                An internal investigation will be carried out by an investigator unrelated to those involved. They will be either a senior staff member, key management personnel or be external to the orginisation. 
+                <br><br>Refer to the <i>Manage incident internally process</i> (located in the Centro app) for further information on what needs to be included in an Investigation repot.
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-3">
+                <div class="normalboldmd">
+                    Name:
+                </div>
+            </div>
+            <div class="col-3 textinput">
+                <input type="text" name="F3name" class="form-control form-control-lg" value="<?php echo $varF3name ?>">
+            </div>
+            <div class="col-3">
+                <div class="normalboldmd">
+                    &#160 Date:
+                </div>
+            </div>
+            <div class="col-3 textinput">
+                <input name="F3date" class="form-control" type="date" value="<?php echo $varF3name ?>" />
+            </div>
+        </div>
+        <br>
+        <div class="row mb-3">
+            <div class="col-3">
+                <div class="normalboldmd">
+                    Position:
+                </div>
+            </div>
+            <div class="col-3 textinput">
+                <input type="text" name="F3position" class="form-control form-control-lg" value="<?php $varF3position ?>">
+            </div>
+            <div class="col-3">
+                <div class="normalboldmd">
+                    &#160 Phone:
+                </div>
+            </div>
+            <div class="col-3 textinput">
+                <input name="F3phone" class="form-control" type="text" value="<?php $varF3phone ?>" />
+            </div>
+        </div>
+        <br>
+        <div class="row mb-3">
+            <div class="col-4">
+                <div class="normalboldmd">
+                    Summary of findings:
+                </div>
+            </div>
+            <div class="col-4"></div>
+            <div class="col-3" style="display: flex;">
+                <div class="normalsm" style="align-self: center; font-size: 35px;">
+                    Days taken to investigate incident:
+                </div>
+            </div>
+            <div class="col-1 textinput">
+                <input name="daystaken" class="form-control" type="number" value="<?php echo $vardaystaken ?>" />
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-12">
+                <div class="textareaborder">
+                    <textarea class="form-control" name="summaryoffindings" rows="10"><?php echo $varsummaryoffindings ?></textarea>
+                </div>
+            </div>
+        </div>
+        <br><br>
+    </div>
 
-
-
+        <div style="margin: 190px;">
+            <div class="row">
+                <div class="col-12">
+                    <div class="headertext" style="font-size: 50px;">&#160</div>
+                </div>
+            </div>
+            <br><br>
+            <div class="row">
+                <div class="col-4">
+                    <div class="underlinelg">Response to investigation</div>
+                </div>
+                <div class="col-8" style="display: flex;">
+                    <div class="normalsm" style="align-self: center">(manager use only)</div>
+                </div>
+            </div>
+            <br>
+            <div class="row mb-3">
+                <div class="col-12">
+                    <div class="normalboldmd">
+                        What changes are necessary to reduce/eliminate recurrence of a similar incident?
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row mb-3">
+                <div class="col-12">
+                    <div class="textareaborder">
+                        <textarea class="form-control" name="whatchanges" rows="12" placeholder="Type here"><?php echo $varwhatchanges ?></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-12">
+                    <div class="normalboldmd">
+                        Is it necessary to provide additional employeee training/discipline? provide details if yes:
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-12">
+                    <div class="textareaborder">
+                        <textarea class="form-control" name="additionaltraining" rows="6" placeholder="Type here"><?php $varadditionaltraining ?></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-12">
+                    <div class="normalboldmd">
+                        Is it necessary to review and update relavant participant support plans, risk management plans or other documents? Provide details if yes:
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-12">
+                    <div class="textareaborder">
+                        <textarea class="form-control" name="updateplans" rows="6" placeholder="Type here"><?php echo $varupdateplans ?></textarea>
+                    </div>
+                </div>
+            </div>
+            <br><br>
+            <div class="row">
+                <div class="col-12">
+                    <div class="headertext" style="font-size: 50px;">&#160</div>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-12">
+                    <div class="underlinelg">Resolve incident</div>
+                </div>
+            </div>
+            <br><br>
+            <div class="row">
+                <div class="col-10" style="display: flex;">
+                    <div class="normalboldsm" style="align-self: center;">
+                        Keeping in mind confidentiality and privacy requirements, has appropiate feedback been provided to all parties involved?
+                    </div>
+                </div>
+                <div class="col-2">
+                    <input class="form-check-input" <?php  if($varappropiatefeedback == "on"){echo "checked";} ?> type="checkbox" style="border: 5px solid rgb(0, 0, 0);">
+                </div>
+            </div>
+            <br><br>
+            <div class="row">
+                <div class="col-10" style="display: flex;">
+                    <div class="normalboldsm" style="align-self: center;">
+                        Have opportunities been provided for participants, their family and advocate (if involved) to provide feedback on the response, investigation and resolution?
+                    </div>
+                </div>
+                <div class="col-2">
+                    <input class="form-check-input" name="opportunities" <?php if($varopportunities == "on"){echo "checked";} ?> type="checkbox" style="border: 5px solid rgb(0, 0, 0);">
+                </div>
+            </div>
+            <br><br>
+            <div class="form-check">
+                <input class="form-check-input" name="managerconsent" <?php if($varmanagerconsent == "on"){echo "checked";}?> style="width: 2em; height: 2em; border: solid 2px;" type="checkbox">
+            <label class="form-check-label normalsm" for="flexCheckDefault">
+                &#160I hereby confirm that the information provided in this report is accurate to the best of my knowledge
+            </label>
+        </div> 
+            <input type="number" name="formid" class="form-control" value="<?php echo $_GET['formid'] ?>">
+            <div>
+                <button type="button" class="btn btn-success" style="--bs-btn-padding-y: 1rem; --bs-btn-padding-x: 2rem; --bs-btn-font-size: 3rem;" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    Sumbit form
+                </button>
+                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h1 class="modal-title normal" id="staticBackdropLabel" style="font-weight: 600;">Submit form?</h1>
+                        <button type="button"  class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="--bs-btn-padding-y: 1rem; --bs-btn-padding-x: 2rem; --bs-btn-font-size: 3rem;"></button>
+                        </div>
+                        <div class="modal-body normal">
+                            Are you sure that all the required fields are filled out and accurate? <br><br> This action cannot be undone.
+                        </div>
+                        <div class="modal-footer">
+                        <button type="button" style="--bs-btn-padding-y: 1rem; --bs-btn-padding-x: 2rem; --bs-btn-font-size: 3rem;" class="btn btn-danger" data-bs-dismiss="modal">No
+                        </button>
+                        <input type="submit" name="formSubmit"  style="--bs-btn-padding-y: 1rem; --bs-btn-padding-x: 2rem; --bs-btn-font-size: 3rem;" value="Submit" class="btn btn-success"></input>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
 </html>
