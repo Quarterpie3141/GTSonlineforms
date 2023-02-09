@@ -19,7 +19,7 @@ app.post('/saveformirf', (req, res) => {
       console.log("puppeteer has launched")
     const page = await browser.newPage();
 
-    const website_url = 'https://localhost/gtsonlineforms/backend/Convertforms/IR-F.php?formid=' + formid; 
+    const website_url = 'https://localhost/gtsonlineforms/Forms/IR-F/convert/IR-F.php?formid=' + formid; 
   
     await page.goto(website_url, { waitUntil: 'networkidle0' }); 
      console.log("processing form.")
