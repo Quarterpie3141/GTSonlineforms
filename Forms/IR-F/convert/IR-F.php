@@ -12,7 +12,7 @@
     <title>IR-F-4</title>
 </head> 
 <?php
-    require_once "../../Backend/config.php";
+    require_once "../../../Backend/config.php";
     $sql = "SELECT Nameofworker,
     Nameofparticipant,
     Phonenumber,
