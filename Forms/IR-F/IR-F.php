@@ -476,7 +476,7 @@
                     <div class="underlinelg">Confirmation of completing employee</div>
                     <br><br>
                     <div class="form-check">
-                            <input class="form-check-input" name="userconsent" style="width: 2em; height: 2em; border: solid 2px;" type="checkbox" value="" id="flexCheckDefault">
+                            <input class="form-check-input" name="userconsent" style="width: 2em; height: 2em; border: solid 2px;" type="checkbox" id="flexCheckDefault">
                         <label class="form-check-label normalsm" for="flexCheckDefault">
                             &#160I hereby confirm that the information provided in this report is accurate to the best of my knowledge
                         </label>
