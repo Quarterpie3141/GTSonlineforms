@@ -526,7 +526,7 @@
                     <div class="underlinelg">Confirmation of completing employee</div>
                     <br><br>
                     <div class="form-check">
-                            <input class="form-check-input" name="userconsent" <?php if ($varUserconsent == true) {echo "checked";} ?> style="width: 2em; height: 2em; border: solid 2px;" type="checkbox">
+                            <input class="form-check-input" name="userconsent" <?php if ($varUserconsent == "on") {echo "checked";} ?> style="width: 2em; height: 2em; border: solid 2px;" type="checkbox">
                         <label class="form-check-label normalsm" for="flexCheckDefault">
                             &#160I hereby confirm that the information provided in this report is accurate to the best of my knowledge
                         </label>

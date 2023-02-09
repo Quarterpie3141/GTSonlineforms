@@ -177,19 +177,19 @@
                     <div class="normalboldmd">Abuse/Assault</div>
                 </div>
                 <div class="col-1">
-                    <input class="form-check-input" name="abuseassult" <?php if ($varAbuseassult == true) {echo "checked";} ?> type="checkbox" style="border: 5px solid rgb(0, 0, 0);">
+                    <input class="form-check-input" name="abuseassult" <?php if ($varAbuseassult == "on") {echo "checked";} ?> type="checkbox" style="border: 5px solid rgb(0, 0, 0);">
                 </div>
                 <div class="col-3">
                     <div class="normalboldmd">Breach of privacy</div>
                 </div>
                 <div class="col-1">
-                    <input class="form-check-input" name="breachofprivacy" <?php if ($varBreachofprivacy == true) {echo "checked";} ?> type="checkbox" style="border: 5px solid rgb(0, 0, 0);">
+                    <input class="form-check-input" name="breachofprivacy" <?php if ($varBreachofprivacy == "on") {echo "checked";} ?> type="checkbox" style="border: 5px solid rgb(0, 0, 0);">
                 </div>
                 <div class="col-3">
                     <div class="normalboldmd">Behaviour (of concern)</div>
                 </div>
                 <div class="col-1">
-                    <input class="form-check-input" name="behaviour" <?php if ($varBehaviour == true) {echo "checked";} ?> type="checkbox" style="border: 5px solid rgb(0, 0, 0);">
+                    <input class="form-check-input" name="behaviour" <?php if ($varBehaviour == "on") {echo "checked";} ?> type="checkbox" style="border: 5px solid rgb(0, 0, 0);">
                 </div>
             </div>
             <br><br>
@@ -198,19 +198,19 @@
                     <div class="normalboldmd">Death</div>
                 </div>
                 <div class="col-1">
-                    <input class="form-check-input" name="death" <?php if ($varDeath == true) {echo "checked";} ?> type="checkbox" style="border: 5px solid rgb(0, 0, 0);">
+                    <input class="form-check-input" name="death" <?php if ($varDeath == "on") {echo "checked";} ?> type="checkbox" style="border: 5px solid rgb(0, 0, 0);">
                 </div>
                 <div class="col-3">
                     <div class="normalboldmd">Injury</div>
                 </div>
                 <div class="col-1">
-                    <input class="form-check-input" name="injury" <?php if ($varInjury == true) {echo "checked";} ?> type="checkbox" style="border: 5px solid rgb(0, 0, 0);">
+                    <input class="form-check-input" name="injury" <?php if ($varInjury == "on") {echo "checked";} ?> type="checkbox" style="border: 5px solid rgb(0, 0, 0);">
                 </div>
                 <div class="col-3">
                     <div class="normalboldmd">Medication</div>
                 </div>
                 <div class="col-1">
-                    <input class="form-check-input" name="medication" <?php if ($varMedication == true) {echo "checked";} ?> type="checkbox" style="border: 5px solid rgb(0, 0, 0);">
+                    <input class="form-check-input" name="medication" <?php if ($varMedication == "on") {echo "checked";} ?> type="checkbox" style="border: 5px solid rgb(0, 0, 0);">
                 </div>
             </div>
             <br><br>
@@ -219,19 +219,19 @@
                     <div class="normalboldmd">Poor quality of care</div>
                 </div>
                 <div class="col-1">
-                    <input class="form-check-input" name="poorqualityofcare" <?php if ($varPoorqualityofcare == true) {echo "checked";} ?> type="checkbox" style="border: 5px solid rgb(0, 0, 0);">
+                    <input class="form-check-input" name="poorqualityofcare" <?php if ($varPoorqualityofcare == "on") {echo "checked";} ?> type="checkbox" style="border: 5px solid rgb(0, 0, 0);">
                 </div>
                 <div class="col-3">
                     <div class="normalboldmd">Property damage</div>
                 </div>
                 <div class="col-1">
-                    <input class="form-check-input" name="propertydamage" <?php if ($varPropertydamage == true) {echo "checked";} ?> type="checkbox" style="border: 5px solid rgb(0, 0, 0);">
+                    <input class="form-check-input" name="propertydamage" <?php if ($varPropertydamage == "on") {echo "checked";} ?> type="checkbox" style="border: 5px solid rgb(0, 0, 0);">
                 </div>
                 <div class="col-3">
                     <div class="normalboldmd">Restrictive practice (unauthorised)</div>
                 </div>
                 <div class="col-1">
-                    <input class="form-check-input" name="restrictivepractice" <?php if ($varRestrictivepractice == true) {echo "checked";} ?> type="checkbox" style="border: 5px solid rgb(0, 0, 0);">
+                    <input class="form-check-input" name="restrictivepractice" <?php if ($varRestrictivepractice == "on") {echo "checked";} ?> type="checkbox" style="border: 5px solid rgb(0, 0, 0);">
                 </div>
             </div>
             <br><br>
@@ -243,7 +243,7 @@
                 <div class="col-8">
                     <div class="input-group">
                         <div class="input-group-text">
-                        <input class="form-check-input mt-0" name="other" <?php if ($varOther == true) {echo "checked";} ?> type="checkbox" style="border: 5px solid rgb(0, 0, 0);">
+                        <input class="form-check-input mt-0" name="other" <?php if ($varOther == "on") {echo "checked";} ?> type="checkbox" style="border: 5px solid rgb(0, 0, 0);">
                         </div>
                             <input type="text" name="otherdetails" value="<?php echo $varOtherdetails;?>" placeholder="Please provide details here" class="form-control" style="border: 3px solid rgb(0, 0, 0);">   
                     </div>                  
@@ -526,7 +526,7 @@
                     <div class="underlinelg">Confirmation of completing employee</div>
                     <br><br>
                     <div class="form-check">
-                            <input class="form-check-input" name="userconsent" <?php if ($varUserconsent == true) {echo "checked";} ?> style="width: 2em; height: 2em; border: solid 2px;" type="checkbox">
+                            <input class="form-check-input" name="userconsent" <?php if ($varUserconsent == "on") {echo "checked";} ?> style="width: 2em; height: 2em; border: solid 2px;" type="checkbox">
                         <label class="form-check-label normalsm" for="flexCheckDefault">
                             &#160I hereby confirm that the information provided in this report is accurate to the best of my knowledge
                         </label>
