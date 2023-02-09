@@ -793,7 +793,7 @@
             <div class="row mb-3">
                 <div class="col-12">
                     <div class="textareaborder">
-                        <textarea class="form-control" name="additionaltraining" rows="6" placeholder="Type here"><?php $varadditionaltraining ?></textarea>
+                        <textarea class="form-control" name="additionaltraining" rows="6" placeholder="Type here"><?php echo $varadditionaltraining ?></textarea>
                     </div>
                 </div>
             </div>
