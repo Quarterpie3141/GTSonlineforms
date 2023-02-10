@@ -498,7 +498,7 @@
                 </div>
             </div>
             <div class="row">
-                <div style="height: 550px;"></div>
+                <div style="height: 200px;"></div>
             </div>
             <div class="row">
             <div style="height: 60px; background-color: rgb(179, 178, 178);"></div>
