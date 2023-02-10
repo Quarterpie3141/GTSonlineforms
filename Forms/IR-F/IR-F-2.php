@@ -533,7 +533,7 @@
                 <div class="normalsm" style="align-self: center">(manager use only)</div>
             </div>
             <div class="col-1">
-                <input type="number" name="formid" class="form-control" value="<?php echo $_GET['formid'] ?>">
+                <input type="number" name="formid" style="display: none;" class="form-control" value="<?php echo $_GET['formid'] ?>">
             </div>
         </div>
         <br>
