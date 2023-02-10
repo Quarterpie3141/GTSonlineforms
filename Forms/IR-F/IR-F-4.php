@@ -851,7 +851,7 @@
                 &#160I hereby confirm that the information provided in this report is accurate to the best of my knowledge
             </label>
         </div> 
-            <input type="number" name="formid" class="form-control" value="<?php echo $_GET['formid'] ?>">
+            <input type="number" name="formid" class="form-control" style="display: none;" value="<?php echo $_GET['formid'] ?>">
             <div>
                 <button type="button" class="btn btn-success" style="--bs-btn-padding-y: 1rem; --bs-btn-padding-x: 2rem; --bs-btn-font-size: 3rem;" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                     Sumbit form

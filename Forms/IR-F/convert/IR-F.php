@@ -851,30 +851,7 @@
                 &#160I hereby confirm that the information provided in this report is accurate to the best of my knowledge
             </label>
         </div> 
-            <input type="number" name="formid" class="form-control" value="<?php echo $_GET['formid'] ?>">
-            <div>
-                <button type="button" class="btn btn-success" style="--bs-btn-padding-y: 1rem; --bs-btn-padding-x: 2rem; --bs-btn-font-size: 3rem;" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                    Sumbit form
-                </button>
-                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                        <h1 class="modal-title normal" id="staticBackdropLabel" style="font-weight: 600;">Submit form?</h1>
-                        <button type="button"  class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="--bs-btn-padding-y: 1rem; --bs-btn-padding-x: 2rem; --bs-btn-font-size: 3rem;"></button>
-                        </div>
-                        <div class="modal-body normal">
-                            Are you sure that all the required fields are filled out and accurate? <br><br> This action cannot be undone.
-                        </div>
-                        <div class="modal-footer">
-                        <button type="button" style="--bs-btn-padding-y: 1rem; --bs-btn-padding-x: 2rem; --bs-btn-font-size: 3rem;" class="btn btn-danger" data-bs-dismiss="modal">No
-                        </button>
-                        <input type="submit" name="formSubmit"  style="--bs-btn-padding-y: 1rem; --bs-btn-padding-x: 2rem; --bs-btn-font-size: 3rem;" value="Submit" class="btn btn-success"></input>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-            </div>
+            <input type="number" name="formid" class="form-control" style="display: none;" value="<?php echo $_GET['formid'] ?>">
         </div>
     </body>
 </html>
