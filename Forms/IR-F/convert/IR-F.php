@@ -702,7 +702,7 @@
                 </div>
             </div>
             <div class="col-3 textinput">
-                <input name="F3date" class="form-control" type="date" value="<?php echo $varF3name ?>" />
+                <input name="F3date" class="form-control" type="date" value="<?php echo $varF3date ?>" />
             </div>
         </div>
         <br>
