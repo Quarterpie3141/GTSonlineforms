@@ -69,7 +69,7 @@ app.post('/saveformhif', (req, res) => {
     console.log("processing form.")
     await page.emulateMediaType('screen');
     const pdf = await page.pdf({
-      path: '../../../../Current SharePoint/GOOD TURN SERVICES/GTS - Sharepoint/01. Administration/Front Office/Assest List/House Inspections/' + ext + "/House inspection#" + formid +"(" + today +").pdf",
+      path: '../../../../Current SharePoint/GOOD TURN SERVICES/GTS - Sharepoint/01. Administration/Front Office/Asset List/House Inspections/' + ext + "/House inspection#" + formid +"(" + today +").pdf",
       margin: { top: '0px', right: '0px', bottom: '0px', left: '0px' },
       printBackground: true,
       width: "2480px",

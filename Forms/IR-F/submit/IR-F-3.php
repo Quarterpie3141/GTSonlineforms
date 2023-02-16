@@ -3,7 +3,7 @@
 
 <head>
 <title>Fatal error</title>
-<h1>If you are seeing this then something has gone wrong please try again later</h1>
+<h1>If you are seeing this then something has gone wrong please report this to it@goodturnservices.com.au and try again later</h1>
 </head>
 
 <?php
