@@ -68,10 +68,10 @@
                         <input type="text" name="phonenumber" class="form-control form-control-lg" placeholder="0123456789">
                     </div>
                 </div>
-                <div class="col-3">
+                <div class="col-2">
                     <div class="normalboldmd">&#160 &#160 Position:</div>
                 </div>
-                <div class="col-3">
+                <div class="col-4">
                     <div class="mb-3 textinput" style="top: 0%; position: relative;">
                     <select name="positionofworker" style="font-size: 40px;" class="form-select form-select-lg">
                             <option selected>---</option>
