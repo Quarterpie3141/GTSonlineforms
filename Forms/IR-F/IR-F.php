@@ -43,7 +43,7 @@
                 </div>
                 <div class="col-6">
                     <div class="mb-3 textinput" style="top: 0%; position: relative;">
-                        <input type="text" name="nameofworker" class="form-control form-control-lg" placeholder="John Doe">
+                        <input type="text" name="nameofworker" class="form-control form-control-lg">
                     </div>                  
                 </div>
             </div>
@@ -54,7 +54,7 @@
                 </div>
                 <div class="col-6">
                     <div class="mb-3 textinput" style="top: 0%; position: relative;">
-                        <input type="text" name="nameofparticipant" class="form-control form-control-lg" placeholder="John Doe">
+                        <input type="text" name="nameofparticipant" class="form-control form-control-lg">
                     </div> 
                 </div>
             </div>
@@ -65,7 +65,7 @@
                 </div>
                 <div class="col-3">
                     <div class="mb-3 textinput" style="top: 0%; position: relative;">
-                        <input type="text" name="phonenumber" class="form-control form-control-lg" placeholder="0123456789">
+                        <input type="text" name="phonenumber" class="form-control form-control-lg">
                     </div>
                 </div>
                 <div class="col-2">
@@ -258,32 +258,32 @@
                 </div>
                 <div class="col-2 tableborder">
                     <div class="mb-3" style="top: 0%; position: relative;">
-                        <input type="text" name="1firstname" class="form-control form-control-lg" placeholder="John">
+                        <input type="text" name="1firstname" class="form-control form-control-lg" >
                     </div>
                 </div>
                 <div class="col-2 tableborder">
                     <div class="mb-3" style="top: 0%; position: relative;">
-                        <input type="text" name="1lastname" class="form-control form-control-lg" placeholder="Doe">
+                        <input type="text" name="1lastname" class="form-control form-control-lg" >
                     </div>
                 </div>
                 <div class="col-2 tableborder">
                     <div class="mb-3" style="top: 0%; position: relative;">
-                        <input type="text" name="1phonenumber" class="form-control form-control-lg" placeholder="0123456789">
+                        <input type="text" name="1phonenumber" class="form-control form-control-lg" >
                     </div>
                 </div>
                 <div class="col-3 tableborder">
                     <div class="mb-3" style="top: 0%; position: relative;">
-                        <input type="text" name="1email" class="form-control form-control-lg" placeholder="example@example.com">
+                        <input type="text" name="1email" class="form-control form-control-lg" >
                     </div>
                 </div>
                 <div class="col-1 tableborder">
                     <div class="mb-3" style="top: 0%; position: relative;">
-                        <input type="text" name="1witness" class="form-control form-control-lg" placeholder="Y/N">
+                        <input type="text" name="1witness" class="form-control form-control-lg" >
                     </div>
                 </div>
                 <div class="col-1 tableborder">
                     <div class="mb-3" style="top: 0%; position: relative;">
-                        <input type="text" name="1injured" class="form-control form-control-lg" placeholder="Y/N">
+                        <input type="text" name="1injured" class="form-control form-control-lg">
                     </div>
                 </div>
             </div>
