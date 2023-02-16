@@ -73,7 +73,7 @@
                 </div>
                 <div class="col-3">
                     <div class="mb-3 textinput" style="top: 0%; position: relative;">
-                    <select name="notified" style="font-size: 40px;" class="form-select form-select-lg">
+                    <select name="positionofworker" style="font-size: 40px;" class="form-select form-select-lg">
                             <option selected>---</option>
                             <option value="Director">Director</option>
                             <option value="Operations Manager">Operations Manager</option>
@@ -81,16 +81,13 @@
                             <option value="HR Manager">HR Manager</option>
                             <option value="IT">IT</option>
                             <option value="Disabliity Care Manager">Disability Care Manager</option>
-                            <option value="Operations Coordinator"></option>
+                            <option value="Operations Coordinator">Operations Coordinator</option>
                             <option value="Event And Engagement Coordinator ">Event And Engagement Coordinator </option>
                             <option value="Disability Care Supervisor">Disability Care Supervisor</option>
                             <option value="Senior Coordinator">Senior Coordinator</option>
                             <option value="Care Coordinator">Care Coordinator</option>
                             <option value="Support worker">Support worker</option>
                             <option value="HR Co-ordinator">HR Co-ordinator</option>
-                            <option value=""></option>
-                            <option value=""></option>
-                            <option value=""></option>
                         </select>
                     </div>
                 </div>
