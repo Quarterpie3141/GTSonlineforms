@@ -102,7 +102,8 @@ Userconsent,
 id,
 assignedto,
 stage,
-complete
+complete,
+positionofworker
 ) 
             
 VALUES 
@@ -136,7 +137,8 @@ VALUES
 '$id',
 '$assignedto',
 '2',
-'0'
+'0',
+'$varPositionofworker'
 )";
 // to do add position of worker to the sql database
 if($conn->query($sql) === TRUE){
