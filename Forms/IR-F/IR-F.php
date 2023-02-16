@@ -44,6 +44,27 @@
                 <div class="col-6">
                     <div class="mb-3 textinput" style="top: 0%; position: relative;">
                         <input type="text" name="nameofworker" class="form-control form-control-lg" placeholder="John Doe">
+                        <select name="notified" style="font-size: 40px;" class="form-select form-select-lg">
+                            <option selected>---</option>
+                            <option value="Director">Director</option>
+                            <option value="Operations Manager">Operations Manager</option>
+                            <option value="Accountant">Accountant</option>
+                            <option value="HR Manager">HR Manager</option>
+                            <option value="IT">IT</option>
+                            <option value="Disabliity Care Manager">Disability Care Manager</option>
+                            <option value="Operations Coordinator"></option>
+                            <option value="Event And Engagement Coordinator ">Event And Engagement Coordinator </option>
+                            <option value="Disability Care Supervisor">Disability Care Supervisor</option>
+                            <option value="Senior Coordinator">Senior Coordinator</option>
+                            <option value="Care Coordinator">Care Coordinator</option>
+                            <option value="Support worker">Support worker</option>
+                            <option value="HR Co-ordinator">HR Co-ordinator</option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                        </select>
+
+
                     </div>                  
                 </div>
             </div>

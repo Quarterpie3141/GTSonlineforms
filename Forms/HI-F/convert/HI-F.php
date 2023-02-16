@@ -69,6 +69,23 @@
     mysqli_stmt_bind_result($stmt, $date, $time, $Address, $Inspector, $smokealarmc, $smokealarm, $fireextinguisherc, $fireextinguisher, $ppekitsc, $ppekits, $letterboxc, $letterbox, $gardenbedsc, $gardenbeds, $binsc, $bins, $livingroomc, $livingroom, $kitchenareac, $kitchenarea, $fridgec, $fridge, $laundryc, $laundry, $bedroom1c, $bedroom1, $bedroom2c, $bedroom2, $bedroom3c, $bedroom3, $toiletsc, $toilets, $lawnsc, $lawns, $gasbottlec, $gasbottle, $storagec, $storage, $couchsofac, $couchsofa, $bedc, $bed, $id, $visitorsigned, $additionalcomments);
     mysqli_stmt_fetch($stmt);
     ?>
+    <script>
+        if(document.getElementById("Address").value == "3"){
+        document.getElementById("PSAIU2").removeAttribute("disabled");
+        document.getElementById("PSAIUC2").removeAttribute("disabled");
+        document.getElementById("PSAIU1").removeAttribute("disabled");
+        document.getElementById("PSAIUC").removeAttribute("disabled");
+        document.getElementById("DR1").removeAttribute("class");
+        document.getElementById("DR2").removeAttribute("class");
+    }else{
+        document.getElementById("PSAIU2").setAttribute("disabled", "");
+        document.getElementById("PSAIUC2").setAttribute("disabled", "");
+        document.getElementById("PSAIU1").setAttribute("disabled", "");
+        document.getElementById("PSAIUC").setAttribute("disabled", "");
+        document.getElementById("DR1").setAttribute("class", "table-secondary");
+        document.getElementById("DR2").setAttribute("class", "table-secondary");
+    }
+    </script>
 
     <form style="margin: 190px;" action="../../Backend/Submitforms/HI-F.php" method="POST">
         <div class="row">
@@ -271,23 +288,7 @@
         </div>
         <br>
     </form>
-    <script>
-        if(document.getElementById("Address").value == "3"){
-        document.getElementById("PSAIU2").removeAttribute("disabled");
-        document.getElementById("PSAIUC2").removeAttribute("disabled");
-        document.getElementById("PSAIU1").removeAttribute("disabled");
-        document.getElementById("PSAIUC").removeAttribute("disabled");
-        document.getElementById("DR1").removeAttribute("class");
-        document.getElementById("DR2").removeAttribute("class");
-    }else{
-        document.getElementById("PSAIU2").setAttribute("disabled", "");
-        document.getElementById("PSAIUC2").setAttribute("disabled", "");
-        document.getElementById("PSAIU1").setAttribute("disabled", "");
-        document.getElementById("PSAIUC").setAttribute("disabled", "");
-        document.getElementById("DR1").setAttribute("class", "table-secondary");
-        document.getElementById("DR2").setAttribute("class", "table-secondary");
-    }
-    </script>
+    
 
 </body>
 </html>
