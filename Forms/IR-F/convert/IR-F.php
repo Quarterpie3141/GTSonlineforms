@@ -58,7 +58,8 @@
     updateplans,
     appropiatefeedback,
     opportunities,
-    managerconsent
+    managerconsent,
+    positionofworker
      FROM ir_f_db WHERE formid = ?";
 
     $stmt = mysqli_prepare($conn, $sql);
@@ -66,7 +67,7 @@
     $param_formid = $_GET["formid"];
     mysqli_stmt_execute($stmt);
     mysqli_stmt_store_result($stmt);
-    mysqli_stmt_bind_result($stmt, $varNameofworker, $varNameofparticipant, $varPhonenumber, $varDate, $varTime, $varLocationofincident, $varAbuseassult, $varBreachofprivacy, $varBehaviour, $varDeath, $varInjury, $varMedication, $varPoorqualityofcare, $varPropertydamage, $varRestrictivepractice, $varOther, $varOtherdetails, $var1firstname, $var1lastname, $var1phonenumber, $var1email, $var1witness, $var1injured, $var2firstname, $var2lastname, $var2phonenumber, $var2email, $var2witness, $var2injured, $var3firstname, $var3lastname, $var3phonenumber, $var3email, $var3witness, $var3injured, $var4firstname, $var4lastname, $var4phonenumber, $var4email, $var4witness, $var4injured, $var5firstname, $var5lastname, $var5phonenumber, $var5email, $var5witness, $var5injured, $var6firstname, $var6lastname, $var6phonenumber, $var6email, $var6witness, $var6injured, $varWhathappened, $varImmediateactionstaken, $varUserconsent, $varnameofmanager, $varf2phone, $varf2position, $varreportable, $varreportedtopolice, $varnotified, $varreportedtoother, $varothername, $varF3name, $varF3date, $varF3position, $varF3phone, $vardaystaken, $varsummaryoffindings, $varwhatchanges, $varadditionaltraining, $varupdateplans, $varappropiatefeedback, $varopportunities, $varmanagerconsent);
+    mysqli_stmt_bind_result($stmt, $varNameofworker, $varNameofparticipant, $varPhonenumber, $varDate, $varTime, $varLocationofincident, $varAbuseassult, $varBreachofprivacy, $varBehaviour, $varDeath, $varInjury, $varMedication, $varPoorqualityofcare, $varPropertydamage, $varRestrictivepractice, $varOther, $varOtherdetails, $var1firstname, $var1lastname, $var1phonenumber, $var1email, $var1witness, $var1injured, $var2firstname, $var2lastname, $var2phonenumber, $var2email, $var2witness, $var2injured, $var3firstname, $var3lastname, $var3phonenumber, $var3email, $var3witness, $var3injured, $var4firstname, $var4lastname, $var4phonenumber, $var4email, $var4witness, $var4injured, $var5firstname, $var5lastname, $var5phonenumber, $var5email, $var5witness, $var5injured, $var6firstname, $var6lastname, $var6phonenumber, $var6email, $var6witness, $var6injured, $varWhathappened, $varImmediateactionstaken, $varUserconsent, $varnameofmanager, $varf2phone, $varf2position, $varreportable, $varreportedtopolice, $varnotified, $varreportedtoother, $varothername, $varF3name, $varF3date, $varF3position, $varF3phone, $vardaystaken, $varsummaryoffindings, $varwhatchanges, $varadditionaltraining, $varupdateplans, $varappropiatefeedback, $varopportunities, $varmanagerconsent, $varPositionofworker);
     mysqli_stmt_fetch($stmt);
     mysqli_stmt_close($stmt);
     
@@ -123,7 +124,7 @@
                 </div>
                 <div class="col-3">
                     <div class="mb-3 textinput" style="top: 0%; position: relative;">
-                        <input type="text" name="positionofworker" class="form-control form-control-lg" value="<?php echo "employee";?>">
+                        <input type="text" name="positionofworker" class="form-control form-control-lg" value="<?php echo $varPositionofworker;?>">
                     </div>
                 </div>
             </div>
