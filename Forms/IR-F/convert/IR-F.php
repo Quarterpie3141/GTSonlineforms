@@ -713,7 +713,7 @@
                 </div>
             </div>
             <div class="col-3 textinput">
-                <input type="text" name="F3position" class="form-control form-control-lg" value="<?php $varF3position ?>">
+                <input type="text" name="F3position" class="form-control form-control-lg" value="<?php echo $varF3position ?>">
             </div>
             <div class="col-3">
                 <div class="normalboldmd">
@@ -721,7 +721,7 @@
                 </div>
             </div>
             <div class="col-3 textinput">
-                <input name="F3phone" class="form-control" type="text" value="<?php $varF3phone ?>" />
+                <input name="F3phone" class="form-control" type="text" value="<?php echo $varF3phone ?>" />
             </div>
         </div>
         <br>
