@@ -89,7 +89,7 @@
                       <img class="bd-placeholder-img card-img-top" src="../Images/Formthumbnails/IR-F.png"> 
                       <div class="card-body">
                         <p class="card-text text-body-emphasis"><b>Incident Report Form</b></p>
-                        <p class="card-text">Not sure what to put here</p>
+                        <p class="card-text">Report an incident</p>
                         <div class="d-flex justify-content-between align-items-center">
                           <div class="btn-group">
                             <a href="../Images/Formthumbnails/IR-F.png"><button type="button" class="btn btn-sm btn-outline-secondary">View</button></a>
@@ -105,7 +105,7 @@
                       <img class="bd-placeholder-img card-img-top" src="../Images/Formthumbnails/HI-F.png">
                       <div class="card-body">
                         <p class="card-text"><b>House Inspection Form</b></p>
-                        <p class="card-text">Not sure what to put here either</p>
+                        <p class="card-text">Inspect a house</p>
                         <div class="d-flex justify-content-between align-items-center">
                           <div class="btn-group">
                             <a href="../Images/Formthumbnails/HI-F.png"><button type="button" class="btn btn-sm btn-outline-secondary">View</button></a>
